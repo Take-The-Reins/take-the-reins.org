@@ -1,0 +1,23 @@
+---
+interface Props {
+  href: string;
+  primary?: boolean;
+  target?: "_self" | "_blank";
+}
+const { href, primary = false, target = "_self" } = Astro.props;
+---
+<a
+  class:list={[
+    "px-4 py-2 transition",
+    { "border border-stone-100 rounded-lg hover:bg-orange-500 hover:border-orange-500": primary }
+  ]}
+  href={href}
+  target={target}>
+  <span
+    class:list={[
+      "text-stone-50 font-bold transition",
+      { "hover:text-orange-300": !primary },
+    ]}>
+    <slot />
+  </span>
+</a>
