@@ -1,11 +1,12 @@
 ---
 import FooterContact from './FooterContact.astro';
 import FooterDev from './FooterDev.astro';
+import FooterLinks from './FooterLinks.astro';
 ---
-<div class="bg-stone-800">
-  <div class="flex flex-row gap-4">
+<div class="flex flex-col items-center bg-stone-900 py-20">
+  <div class="flex flex-row gap-8 md:gap-20 lg:gap-40 max-w-4xl">
     <FooterContact />
-    <div class="flex-grow" />
+    <FooterLinks />
     <FooterDev />
   </div>
 </div>

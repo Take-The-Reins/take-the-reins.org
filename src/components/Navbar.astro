@@ -3,20 +3,21 @@ import { Image } from "astro:assets";
 
 import NavbarLink from "./NavbarLink.astro";
 ---
-<div class="flex flex-row items-center">
+<div class="flex flex-row items-center flex-wrap">
   <a href="/">
     <Image
       alt="Women Investors Network logo"
-      height={120}
+      height={100}
       src="/ttr-logo.png"
-      width={120}
+      width={100}
     />
   </a>
   <span class="text-2xl font-bold text-stone-200">Take The Reins</span>
   <div class="grow" />
-  <div class="flex flex-row items-center">
+  <div class="flex flex-row items-center flex-wrap">
     <NavbarLink href="/about">ABOUT US</NavbarLink>
     <NavbarLink href="/events">EVENTS</NavbarLink>
+    <NavbarLink href="/volunteer">VOLUNTEER</NavbarLink>
     <NavbarLink href="/donate" primary>
       DONATE
     </NavbarLink>
