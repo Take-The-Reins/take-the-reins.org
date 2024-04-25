@@ -1,12 +1,13 @@
 ---
 interface Props {
   description: string;
+  imageSrc: string;
   title: string;
 }
-const { description, title } = Astro.props;
+const { description, imageSrc, title } = Astro.props;
 ---
 <div class="flex flex-row items-center flex-wrap lg:flex-nowrap gap-4">
-  <img class="rounded-md shadow-sm x-hero-image" src="/farm-2.png" />
+  <img class="rounded-md shadow-sm x-hero-image" src={imageSrc} />
   <div class="flex flex-col">
     <span class="text-xl font-bold">{title}</span>
     <span class="text-md font-light">{description}</span>
