@@ -6,11 +6,16 @@ interface Props {
 const { href, target } = Astro.props;
 ---
 <a
-  class="rounded bg-orange-50 border border-orange-200 px-12 py-6 hover:bg-orange-200 transition-all"
+  class:list={{
+    "px-12 py-6 transition-all": true,
+    "shadow-md hover:shadow-xl": true,
+    "border border-orange-300 rounded-xl": true, 
+    "bg-orange-200 hover:bg-orange-300": true,
+  }}
   href={href}
   target={target}
 >
-  <span class="text-orange-600 text-xl font-semibold">
+  <span class="text-orange-950 text-xl font-semibold">
     <slot />
   </span>
 </a>

@@ -1,0 +1,22 @@
+---
+import Footer from "../components/footer/Footer.astro"
+import Navbar from "../components/Navbar.astro"
+import BaseLayout from "../layouts/BaseLayout.astro"
+---
+<BaseLayout title="Take The Reins">
+	<div class="px-2 lg:px-8 py-1 lg:py-2 bg-orange-950 mb-10">
+		<Navbar />
+	</div>
+	<main class="flex flex-col items-center bg-stone-50 x-container">
+    <span class="text-xl font-semibold text-stone-900 pb-2">
+      Events
+    </span>
+	</main>
+	<Footer />
+</BaseLayout>
+
+<style>
+.x-container {
+  min-height: 70vh;
+}
+</style>
