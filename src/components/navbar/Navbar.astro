@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets";
+import NavbarLink from "./NavbarLink.astro";
+
+interface Props {
+  foregroundColor: "light" | "dark";
+}
+const { foregroundColor } = Astro.props;
+---
+<div class="flex flex-row items-center flex-wrap">
+  <a class="flex flex-row items-center flex-wrap" href="/">
+    <Image
+      alt="Women Investors Network logo"
+      height={100}
+      src="/ttr-logo.png"
+      width={100}
+    />
+    <span class:list={[
+      "text-2xl font-bold",
+      { "text-zinc-50": foregroundColor === "light" },
+      { "text-zinc-950": foregroundColor === "dark" }
+    ]}>Take The Reins</span>
+  </a>
+  <div class="grow" />
+  <div class="flex flex-row items-center flex-wrap">
+    <NavbarLink foregroundColor={foregroundColor} href="/about">ABOUT US</NavbarLink>
+    <div class="min-w-2" />
+    <NavbarLink foregroundColor={foregroundColor} href="/donate" primary>
+      DONATE
+    </NavbarLink>
+  </div>
+</div>

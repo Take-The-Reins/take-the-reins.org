@@ -2,48 +2,61 @@
 import Button from '../components/Button.astro';
 import Footer from '../components/footer/Footer.astro';
 import ProgramCard from '../components/index/ProgramCard.astro';
-import Navbar from '../components/Navbar.astro';
+import QualityCard from '../components/index/QualityCard.astro';
+import Navbar from '../components/navbar/Navbar.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ContentContainer from '../layouts/ContentContainer.astro';
 ---
 
 <BaseLayout title="Take The Reins">
 	<div class="px-2 lg:px-8 py-1 lg:py-2 x-header">
-		<Navbar />
+		<Navbar foregroundColor='light' />
 	</div>
-	<main class="flex flex-col items-center bg-stone-50">
-		<div class="flex flex-col items-center min-h-96 py-6 container">
-			<span class="text-xl text-stone-900 font-semibold text-center max-w-2xl pb-12">
-				We harness the power of horses to expand opportunities for Central Indiana's youth.
-			</span>
-			<div class="pb-12">
-				<Button href="/donate" target="_self">
-					Donate Now
-				</Button>
-			</div>
-			<span class="text-lg text-center text-stone-700 max-w-3xl px-2 pb-12">
-				Take The Reins is a 501(c)(3) nonprofit founded in 2023 by etc etc etc this is some body text we can replace
-				with whatever we'd like Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-				incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-				nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
-				dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-				 deserunt mollit anim id est laborum.
-			</span>
-			<div class="flex flex-col max-w-4xl px-2 pb-20 gap-4">
-				<ProgramCard
-					title="Work To Ride Program"
-					description='aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-					imageSrc='/farm-2.png'
-					ctaHref='/work-to-ride'
-					/>
-				<ProgramCard
-					title="Volunteering"
-					description='aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-					imageSrc='/horse-1.png'
-					ctaHref='/volunteer'
-					/>
-			</div>
+	<ContentContainer constrainWidth={false}>
+		<span class="text-xl text-stone-900 font-semibold text-center max-w-2xl pb-12">
+			We are facilitators of a structured, safe-haven environment where opportunity gap-effected youth are encouraged
+			to be involved in applied learning, hard work, supportive interaction, and teamwork while engaging in an
+			equine-rich climate.
+		</span>
+		<div class="pb-12">
+			<Button href="/donate" target="_self">
+				Donate Now
+			</Button>
 		</div>
-	</main>
+		<span class="text-md text-center text-stone-900 max-w-3xl pb-12">
+			In a safe and structured environment, Take the Reins offers historically underserved and opportunity
+			gap-effected youth the opportunities to learn and develop themselves through horsemanship and animal husbandry.
+			In turn, we strive to aid youth in developing essential skills to form and establish professional and familial 
+			relationships that becomre core, integral components of their life. As a result, our youth realize that
+			accomplishment in life comes from applied learning, a strong work ethic, and a healthy connection with others.
+		</span>
+		<span class="text-xl text-stone-900 font-semibold text-center pb-6">
+			How Are We Different?
+		</span>
+		<div class="flex flex-row flex-wrap gap-10 px-12 pb-12">
+			<QualityCard imgSrc="/horse-2.webp" text="Structured Equine Education Beyond the Schooling Ring" />
+			<QualityCard imgSrc="/study-1.webp" text="High School Tutoring, focusing on Math and Reading + Writing" />
+			<QualityCard imgSrc="/horse-show-1.webp" text="English and Western Show Teams" />
+			<QualityCard imgSrc="/horse-training-1.webp" text="Support After High School" />
+		</div>
+		<span class="text-xl text-stone-900 font-semibold text-center pb-6">
+			Our Programs
+		</span>
+		<div class="flex flex-col max-w-4xl px-2 pb-20 gap-4">
+			<ProgramCard
+				title="Work To Ride Program"
+				description='aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+				imageSrc='/farm-2.png'
+				ctaHref='/work-to-ride'
+				/>
+			<ProgramCard
+				title="Volunteering"
+				description='aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+				imageSrc='/horse-1.png'
+				ctaHref='/volunteer'
+				/>
+		</div>
+	</ContentContainer>
 	<Footer />
 </BaseLayout>
 

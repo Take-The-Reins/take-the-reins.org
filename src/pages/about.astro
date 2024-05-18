@@ -1,25 +1,34 @@
 ---
+import TeamMemberCard from "../components/about/TeamMemberCard.astro"
 import Footer from "../components/footer/Footer.astro"
-import Navbar from "../components/Navbar.astro"
+import Navbar from "../components/navbar/Navbar.astro"
 import BaseLayout from "../layouts/BaseLayout.astro"
+import ContentContainer from "../layouts/ContentContainer.astro"
 ---
 <BaseLayout title="Take The Reins">
-	<div class="px-2 lg:px-8 py-1 lg:py-2 bg-orange-950 mb-10">
-		<Navbar />
+	<div class="px-2 lg:px-8 py-1 lg:py-2 bg-orange-300">
+		<Navbar foregroundColor="dark" />
 	</div>
-	<main class="flex flex-col items-center bg-stone-50 x-container">
-    <span class="text-xl font-semibold text-stone-900 pb-2">
-      Our Mission
+	<ContentContainer>
+    <span class="text-4xl font-semibold text-stone-900 pb-2">
+      Our Team
     </span>
-    <span class="text-lg text-center text-stone-700 max-w-3xl px-2 pb-10 leading-snug">
-      Take The Reins is a 501(c)(3) nonprofit founded in 2023 by etc etc etc this is some body text we can replace
-      with whatever we'd like Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
-      dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-        deserunt mollit anim id est laborum.
+    <span class="text-md font-thin text-stone-900 text-center pb-12">
+      Take The Reins is a 501(c)(3) nonprofit founded in 2023.
     </span>
-	</main>
+    <div class="flex flex-col gap-8">
+      <TeamMemberCard 
+        description="Jeff Weaver graduated from the University of Georgia College of Pharmacy in 1983 and enjoyed a career of thirty-one years with Eli Lilly and Company. There, he developed skills in facilitating strategic planning which has enabled him to pursue other dreams. His wife Brenda's passion for horses rekindled his own long-lost love for horses, and he began riding. In 2016, Jeff started Jacobs Creek Racing LLC, and standardbred racing stable that now has six active racehorses. Through close friends who are teachers in Indianapolis and Philadelphia, Jeff has become aware of the issues that face many inner-city children. After reading Kareem Rosser's book Crossing the Line, and getting to know fellow rider (and inner-city teacher) Alison Haag at Essig Farms, Jeff began to transform a dream into a plan for Take The Reins Youth Stable for Life."
+        imageSrc="/horse-2.webp"
+        name="Jeff Weaver" 
+        title="Co-Founder and Executive Director" />
+      <TeamMemberCard 
+        description="Alison Haag has been involved with horses since 1989. She learned Hunter/Jumper horsemanship at Stanley Lake Farm near Chicago, IL. She had multiple trainers there and attended clinics led by Olympian Michael Page. After a successful appointment in retail, Alison embraced her true calling: education. Alison now strives to weave her love of teaching high school students with her equine passions. Alison's ultimate dream is to create a safe place for her students where they can find the same zest for horses that she and fellow rider Jeff Weaver and horse trainer Don Bode emanate."
+        imageSrc="/horse-2.webp"
+        name="Alison Haag" 
+        title="Co-Founder and Program Director" />
+      </div>
+	</ContentContainer>
 	<Footer />
 </BaseLayout>
 

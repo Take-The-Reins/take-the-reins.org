@@ -1,22 +1,21 @@
 ---
 import Footer from "../components/footer/Footer.astro"
-import Navbar from "../components/Navbar.astro"
+import Navbar from "../components/navbar/Navbar.astro"
 import BaseLayout from "../layouts/BaseLayout.astro"
+import ContentContainer from "../layouts/ContentContainer.astro"
 ---
 <BaseLayout title="Take The Reins">
-	<div class="px-2 lg:px-8 py-1 lg:py-2 bg-orange-950 mb-10">
-		<Navbar />
+	<div class="px-2 lg:px-8 py-1 lg:py-2 bg-orange-300">
+		<Navbar foregroundColor="dark" />
 	</div>
-	<main class="flex flex-col items-center bg-stone-50 x-container">
-    <span class="text-xl font-semibold text-stone-900 pb-2">
-      Donate
-    </span>
-	</main>
+	<ContentContainer>
+		<span class="text-4xl font-semibold text-stone-900 mb-4">
+			Donations
+		</span>
+		<span class="text-md font-thin text-stone-900 text-center">
+			We're still in the process of getting our organization operational, and are not accepting donations at this time.
+			Please check back soon!
+		</span>
+	</ContentContainer>
 	<Footer />
 </BaseLayout>
-
-<style>
-.x-container {
-  min-height: 70vh;
-}
-</style>

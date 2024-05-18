@@ -1,0 +1,29 @@
+---
+interface Props {
+  foregroundColor: "light" | "dark";
+  href: string;
+  primary?: boolean;
+  target?: "_self" | "_blank";
+}
+const { foregroundColor, href, primary = false, target = "_self" } = Astro.props;
+---
+<a
+  class:list={[
+    "px-4 py-2 transition",
+    { "border rounded-lg hover:shadow-xl": primary },
+    { "border-zinc-100 hover:bg-orange-500 hover:border-orange-500": primary && foregroundColor === "light" },
+    { "border-orange-950 hover:bg-orange-200 hover:border-orange-300": primary && foregroundColor === "dark" },
+  ]}
+  href={href}
+  target={target}>
+  <span
+    class:list={[
+      "font-semibold transition",
+      { "text-zinc-50": foregroundColor === "light" },
+      { "text-zinc-950": foregroundColor === "dark" },
+      { "hover:text-orange-200": !primary && foregroundColor === "light" },
+      { "hover:text-orange-600": !primary && foregroundColor === "dark" },
+    ]}>
+    <slot />
+  </span>
+</a>
