@@ -11,7 +11,7 @@ const { foregroundColor, href, primary = false, target = "_self" } = Astro.props
   class:list={[
     "px-4 py-2 transition",
     { "border rounded-lg hover:shadow-xl": primary },
-    { "border-zinc-100 hover:bg-orange-500 hover:border-orange-500": primary && foregroundColor === "light" },
+    { "border-slate-100 hover:bg-orange-500 hover:border-orange-500": primary && foregroundColor === "light" },
     { "border-orange-950 hover:bg-orange-200 hover:border-orange-300": primary && foregroundColor === "dark" },
   ]}
   href={href}
@@ -19,10 +19,10 @@ const { foregroundColor, href, primary = false, target = "_self" } = Astro.props
   <span
     class:list={[
       "font-semibold transition",
-      { "text-zinc-50": foregroundColor === "light" },
-      { "text-zinc-950": foregroundColor === "dark" },
-      { "hover:text-orange-200": !primary && foregroundColor === "light" },
-      { "hover:text-orange-600": !primary && foregroundColor === "dark" },
+      { "text-slate-50": foregroundColor === "light" },
+      { "text-slate-950": foregroundColor === "dark" },
+      { "hover:text-slate-300": !primary && foregroundColor === "light" },
+      { "hover:text-slate-700": !primary && foregroundColor === "dark" },
     ]}>
     <slot />
   </span>
