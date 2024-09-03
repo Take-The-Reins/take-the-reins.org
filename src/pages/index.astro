@@ -8,7 +8,7 @@ import ContentContainer from '../layouts/ContentContainer.astro';
 ---
 
 <BaseLayout title="Take The Reins">
-	<video autoplay muted class="x-hero-video">
+	<video autoplay class="x-hero-video" muted playsinline>
 		<source src="/ttr-hero-comp.mp4" />
 	</video>
 	<ContentContainer constrainWidth={false}>
