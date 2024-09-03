@@ -3,45 +3,55 @@ import Button from '../components/Button.astro';
 import Footer from '../components/footer/Footer.astro';
 import ProgramCard from '../components/index/ProgramCard.astro';
 import QualityCard from '../components/index/QualityCard.astro';
-import Navbar from '../components/navbar/Navbar.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ContentContainer from '../layouts/ContentContainer.astro';
 ---
 
 <BaseLayout title="Take The Reins">
-	<div class="px-2 lg:px-8 py-1 lg:py-2 x-header">
-		<Navbar foregroundColor='light' />
-	</div>
+	<video autoplay muted class="x-hero-video">
+		<source src="/ttr-hero-comp.mp4" />
+	</video>
 	<ContentContainer constrainWidth={false}>
-		<span class="text-xl text-stone-900 font-semibold text-center max-w-2xl pb-12">
+		<div class="flex flex-row flex-wrap items-center justify-center gap-4 pb-20">
+			<Button href="/about" target="_self">
+				About Us
+			</Button>
+			<Button href="/donate" target="_self">
+				Our Capital Campaign
+			</Button>
+			<Button href="/donate" target="_self">
+				Get Involved
+			</Button>
+			<Button href="/donate" target="_self" variant='primary'>
+				Donate Now
+			</Button>
+		</div>
+		<span class="text-lg md:text-xl text-stone-900 font-semibold text-center max-w-2xl pb-12">
 			We are facilitators of a structured, safe-haven environment where opportunity gap-effected youth are encouraged
 			to be involved in applied learning, hard work, supportive interaction, and teamwork while engaging in an
 			equine-rich climate.
 		</span>
-		<div class="pb-12">
-			<Button href="/donate" target="_self">
-				Donate Now
-			</Button>
-		</div>
-		<span class="text-md text-center text-stone-900 max-w-3xl pb-12">
+		<span class="text-md md:text-lg text-center text-stone-900 max-w-3xl pb-12">
 			In a safe and structured environment, Take the Reins offers historically underserved and opportunity
 			gap-effected youth the opportunities to learn and develop themselves through horsemanship and animal husbandry.
 			In turn, we strive to aid youth in developing essential skills to form and establish professional and familial 
 			relationships that becomre core, integral components of their life. As a result, our youth realize that
 			accomplishment in life comes from applied learning, a strong work ethic, and a healthy connection with others.
 		</span>
-		<span class="text-xl text-stone-900 font-semibold text-center pb-6">
+		<span class="text-2xl text-stone-900 font-semibold text-center">
 			How Are We Different?
 		</span>
-		<div class="flex flex-row flex-wrap gap-10 px-12 pb-12">
-			<QualityCard imgSrc="/horse-2.webp" text="Structured Equine Education Beyond the Schooling Ring" />
-			<QualityCard imgSrc="/study-1.webp" text="High School Tutoring, focusing on Math and Reading + Writing" />
+		<div class="bg-stone-300 mb-6" style="min-height: 1px; width: 100%;" />
+		<div class="flex flex-row flex-wrap items-center justify-center gap-10 px-12 pb-12">
+			<QualityCard imgSrc="/horse-2.webp" text="Structured Equine Education" />
+			<QualityCard imgSrc="/study-1.webp" text="High School Tutoring" />
 			<QualityCard imgSrc="/horse-show-1.webp" text="English and Western Show Teams" />
 			<QualityCard imgSrc="/horse-training-1.webp" text="Support After High School" />
 		</div>
-		<span class="text-xl text-stone-900 font-semibold text-center pb-6">
+		<span class="text-2xl text-stone-900 font-semibold text-center">
 			Our Programs
 		</span>
+		<div class="bg-stone-300 mb-6" style="min-height: 1px; width: 100%;" />
 		<div class="flex flex-col max-w-4xl px-2 pb-20 gap-4">
 			<ProgramCard
 				title="Work To Ride Program"
@@ -61,11 +71,15 @@ import ContentContainer from '../layouts/ContentContainer.astro';
 </BaseLayout>
 
 <style>
-.x-header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0)), url('/farm-1.webp');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 40vh;
+	
+.x-nav {
+	width: 100%;
+}
+.x-hero-video {
+	min-height: 40vh;
+	max-height: 60vh;
+	object-fit: cover;
+	object-position: center center;
+	width: 100%;
 }
 </style>
