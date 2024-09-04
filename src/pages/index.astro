@@ -1,83 +1,68 @@
 ---
 import Button from '../components/Button.astro';
-import Footer from '../components/footer/Footer.astro';
-import ProgramCard from '../components/index/ProgramCard.astro';
-import QualityCard from '../components/index/QualityCard.astro';
+import SubheroNavItem from '../components/index/SubheroNavItem.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ContentContainer from '../layouts/ContentContainer.astro';
+import Footer from '../components/footer/Footer.astro';
 ---
-
-<BaseLayout title="Take The Reins">
+<BaseLayout backgroundColor='#e7e5e4' title="Take The Reins">
 	<video autoplay class="x-hero-video" muted playsinline>
 		<source src="/ttr-hero-comp.mp4" />
 	</video>
-	<ContentContainer constrainWidth={false}>
-		<div class="flex flex-row flex-wrap items-center justify-center gap-4 pb-20">
-			<Button href="/about" target="_self">
-				About Us
-			</Button>
-			<Button href="/donate" target="_self">
-				Our Capital Campaign
-			</Button>
-			<Button href="/donate" target="_self">
-				Get Involved
-			</Button>
-			<Button href="/donate" target="_self" variant='primary'>
-				Donate Now
-			</Button>
+	<div class="flex flex-row flex-wrap items-center justify-center">
+		<SubheroNavItem href="/#our-mission">Our Mission</SubheroNavItem>
+		<SubheroNavItem href="/program">Our Program</SubheroNavItem>
+		<SubheroNavItem href="/success">Program Success</SubheroNavItem>
+		<SubheroNavItem href="/start-up-campaign">Start Up Campaign</SubheroNavItem>
+		<SubheroNavItem href="/get-involved">Get Involved</SubheroNavItem>
+		<SubheroNavItem href="/about">About Us</SubheroNavItem>
+		<SubheroNavItem href="/donate">Donate</SubheroNavItem>
+	</div>
+	<ContentContainer>
+		<div class="flex flex-row items-center justify-center py-12 md:py-20">
+			<span class="text-4xl text-center font-light italic text-zinc-800">
+				Youth taking the reins of their future in a stable and productive environment.
+			</span>
 		</div>
-		<span class="text-lg md:text-xl text-stone-900 font-semibold text-center max-w-2xl pb-12">
-			We are facilitators of a structured, safe-haven environment where opportunity gap-effected youth are encouraged
-			to be involved in applied learning, hard work, supportive interaction, and teamwork while engaging in an
-			equine-rich climate.
-		</span>
-		<span class="text-md md:text-lg text-center text-stone-900 max-w-3xl pb-12">
-			In a safe and structured environment, Take the Reins offers historically underserved and opportunity
-			gap-effected youth the opportunities to learn and develop themselves through horsemanship and animal husbandry.
-			In turn, we strive to aid youth in developing essential skills to form and establish professional and familial 
-			relationships that becomre core, integral components of their life. As a result, our youth realize that
-			accomplishment in life comes from applied learning, a strong work ethic, and a healthy connection with others.
-		</span>
-		<span class="text-2xl text-stone-900 font-semibold text-center">
-			How Are We Different?
-		</span>
-		<div class="bg-stone-300 mb-6" style="min-height: 1px; width: 100%;" />
-		<div class="flex flex-row flex-wrap items-center justify-center gap-10 px-12 pb-12">
-			<QualityCard imgSrc="/horse-2.webp" text="Structured Equine Education" />
-			<QualityCard imgSrc="/study-1.webp" text="High School Tutoring" />
-			<QualityCard imgSrc="/horse-show-1.webp" text="English and Western Show Teams" />
-			<QualityCard imgSrc="/horse-training-1.webp" text="Support After High School" />
+		<div class="flex flex-col pb-12 md:pb-20">
+			<span id="our-mission" class="text-3xl">
+				Our Mission
+			</span>
+			<div class="bg-stone-400 x-divider mb-2" />
+			<span class="items-end text-md md:text-lg text-start font-light text-zinc-800">
+				Take the Reins (TtR) offers underserved youth the opportunity to learn and help themselves through horsemanship and animal husbandry in a safe, structured environment.  We strive to aid youth in developing essential skills and traits to form strong family and professional relationships that become core integral components of their lives.  TtR Youth will realize that accomplishment in life comes through applied learning, a strong work ethic, and healthy connections with others.
+			</span>
 		</div>
-		<span class="text-2xl text-stone-900 font-semibold text-center">
-			Our Programs
-		</span>
-		<div class="bg-stone-300 mb-6" style="min-height: 1px; width: 100%;" />
-		<div class="flex flex-col max-w-4xl px-2 pb-20 gap-4">
-			<ProgramCard
-				title="Work To Ride Program"
-				description='This is a description of the work to ride program.'
-				imageSrc='/farm-2.png'
-				/>
-			<ProgramCard
-				title="Volunteering"
-				description=""
-				imageSrc='/horse-1.png'
-				/>
+		<div class="flex flex-col pb-12 md:pb-20">
+			<span id="our-mission" class="text-3xl">
+				Take The Reins: Youth Stable for Life is...
+			</span>
+			<div class="bg-stone-400 x-divider mb-2" />
+			<span class="items-end text-md md:text-lg text-start font-light text-zinc-800">
+				...a 501(c)(3) nonprofit organization that was newly founded in 2023.  Our community-based prevention and education program focuses on central Indiana’s under-resourced youth by providing constructive activities in horsemanship, equine sport and educational support. In our initial start up phase, Take the Reins programs will focus on secondary school students aged 14-18 years of age.  Youth must commit to a minimum of one year participation are encouraged and expected to remain in the program through high school graduation. Learn more about our program and getting started on 
+			</span>
+		</div>
+		<div class="flex flex-row items-center justify-center gap-4 pb-12 md:pb-20">
+			<Button href="/donate" variant='primary'>Donate</Button>
+			<Button href="/program">Learn About Our Program</Button>
 		</div>
 	</ContentContainer>
 	<Footer />
 </BaseLayout>
-
 <style>
-	
 .x-nav {
 	width: 100%;
 }
 .x-hero-video {
 	min-height: 40vh;
-	max-height: 60vh;
+	max-height: 80vh;
 	object-fit: cover;
 	object-position: center center;
+	width: 100%;
+}
+.x-divider {
+	min-height: 1px;
+	max-height: 1px;
 	width: 100%;
 }
 </style>
