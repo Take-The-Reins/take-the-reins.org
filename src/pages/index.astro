@@ -4,12 +4,13 @@ import SubheroNavItem from '../components/index/SubheroNavItem.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ContentContainer from '../layouts/ContentContainer.astro';
 import Footer from '../components/footer/Footer.astro';
+import TTRSignature from '../components/TTRSignature.astro';
 ---
 <BaseLayout backgroundColor='#e7e5e4' title="Take The Reins">
 	<video autoplay class="x-hero-video" muted playsinline>
 		<source src="/ttr-hero-comp-v6-l.mp4" />
 	</video>
-	<div class="flex flex-row flex-wrap items-center justify-center">
+	<div class="flex flex-row flex-wrap items-center justify-center gap-4 m-4">
 		<SubheroNavItem href="/#our-mission">Our Mission</SubheroNavItem>
 		<SubheroNavItem href="/program">Our Program</SubheroNavItem>
 		<SubheroNavItem href="/success">Program Success</SubheroNavItem>
@@ -30,7 +31,11 @@ import Footer from '../components/footer/Footer.astro';
 			</span>
 			<div class="bg-stone-400 x-divider mb-2" />
 			<span class="items-end text-md md:text-lg text-start font-light text-zinc-800">
-				Take the Reins (TtR) offers underserved youth the opportunity to learn and help themselves through horsemanship and animal husbandry in a safe, structured environment.  We strive to aid youth in developing essential skills and traits to form strong family and professional relationships that become core integral components of their lives.  TtR Youth will realize that accomplishment in life comes through applied learning, a strong work ethic, and healthy connections with others.
+				Take the Reins (<TTRSignature />) offers underserved youth the opportunity to learn and help themselves through
+				horsemanship and animal husbandry in a safe, structured environment.  We strive to aid youth in developing
+				essential skills and traits to form strong family and professional relationships that become core integral
+				components of their lives. <TTRSignature /> Youth will realize that accomplishment in life comes through applied
+				learning, a strong work ethic, and healthy connections with others.
 			</span>
 		</div>
 		<div class="flex flex-col pb-12 md:pb-20">
@@ -39,7 +44,12 @@ import Footer from '../components/footer/Footer.astro';
 			</span>
 			<div class="bg-stone-400 x-divider mb-2" />
 			<span class="items-end text-md md:text-lg text-start font-light text-zinc-800">
-				...a 501(c)(3) nonprofit organization that was newly founded in 2023.  Our community-based prevention and education program focuses on central Indiana’s under-resourced youth by providing constructive activities in horsemanship, equine sport and educational support. In our initial start up phase, Take the Reins programs will focus on secondary school students aged 14-18 years of age.  Youth must commit to a minimum of one year participation are encouraged and expected to remain in the program through high school graduation. Learn more about our program and getting started on 
+				...a 501(c)(3) nonprofit organization that was newly founded in 2023.  Our community-based prevention and 
+				education program focuses on central Indiana’s under-resourced youth by providing constructive activities in 
+				horsemanship, equine sport and educational support. In our initial start up phase, Take the Reins programs will 
+				focus on secondary school students aged 14-18 years of age.  Youth must commit to a minimum of one year
+				participation are encouraged and expected to remain in the program through high school graduation. Learn more
+				about our program and getting started!
 			</span>
 		</div>
 		<div class="flex flex-row items-center justify-center gap-4 pb-12 md:pb-20">

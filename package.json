@@ -1,7 +1,7 @@
 {
-  "name": "",
+  "name": "take-the-reins-org",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -11,11 +11,13 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.3",
-    "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/tailwind": "^5.1.1",
     "@iconify-json/mdi": "^1.2.0",
-    "astro": "^4.15.2",
+    "astro": "^4.15.9",
     "astro-icon": "^1.1.1",
-    "tailwindcss": "^3.4.10",
-    "typescript": "^5.5.4"
+    "tailwindcss": "^3.4.13"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.2"
   }
 }

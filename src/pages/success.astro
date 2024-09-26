@@ -1,0 +1,26 @@
+---
+import Footer from "../components/footer/Footer.astro"
+import Navbar from "../components/navbar/Navbar.astro"
+import ProgramCard from "../components/program/ProgramCard.astro"
+import TTRSignature from "../components/TTRSignature.astro"
+import BaseLayout from "../layouts/BaseLayout.astro"
+import ContentContainer from "../layouts/ContentContainer.astro"
+---
+<BaseLayout title="Take The Reins">
+  <Navbar />
+	<ContentContainer>
+		<span class="text-4xl font-semibold text-stone-800 pb-4">
+			We Know It Works
+		</span>
+    <span class="text-3xl">
+      and metrics will be our key!
+    </span>
+    <span class="text-md font-thin text-stone-800 text-center pb-12">
+      The name makes it clear- Take the Reins Youth Stable for Life is a safe haven nonprofit where youth are given the
+      opportunity to take the reins of their life in a stable environment. The students make a commitment to work hard,
+      learn, persevere, and cooperate with others to achieve both personal and group goals.  The youth will move beyond
+      school and Take the Reins well-prepared and confident in their ability to live a productive and stable life. 
+    </span>
+	</ContentContainer>
+	<Footer />
+</BaseLayout>

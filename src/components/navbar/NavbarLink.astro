@@ -9,16 +9,15 @@ const { href, primary = false, target = "_self" } = Astro.props;
 <a
   class:list={[
     "px-4 py-2 transition",
-    { "border rounded-lg hover:shadow-xl": primary },
-    { "border-orange-100 hover:bg-orange-100 hover:border-orange-300": primary },
+    { "border rounded-xl hover:shadow-xl": primary },
+    { "border-orange-900 hover:bg-orange-200 hover:border-orange-200": primary },
   ]}
   href={href}
   target={target}>
   <span
     class:list={[
-      "font-semibold transition",
-      { "text-orange-950": true },
-      { "hover:text-orange-50": !primary },
+      "font-semibold text-orange-900 transition",
+      { "hover:text-orange-700": !primary },
     ]}>
     <slot />
   </span>
