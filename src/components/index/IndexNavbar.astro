@@ -51,8 +51,8 @@ import IndexNavItem from "./IndexNavItem.astro";
   }
 </style>
 <script>
-  document.getElementById('menu-button').addEventListener('click', () => {
-    document.getElementById("sidebar").classList.toggle("collapsed");
+  document.getElementById('menu-button')?.addEventListener('click', () => {
+    document.getElementById("sidebar")?.classList.toggle("collapsed");
   });
 </script>
 
