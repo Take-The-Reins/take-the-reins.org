@@ -8,7 +8,7 @@ if (typeof constrainWidth === 'undefined') {
 }
 ---
 <main class="flex flex-col items-center bg-stone-200 x-container px-4 py-8">
-  <div class:list={["flex flex-col items-center", { "max-w-4xl": constrainWidth }]}>
+  <div class:list={["flex flex-col items-center", { "max-w-4xl": constrainWidth }]} style="z-index: 0;">
     <slot />
   </div>
 </main>
