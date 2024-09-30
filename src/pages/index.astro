@@ -7,18 +7,18 @@ import Footer from '../components/footer/Footer.astro';
 import TTRSignature from '../components/TTRSignature.astro';
 ---
 <BaseLayout backgroundColor='#e7e5e4' title="Take The Reins">
+  <div class="absolute flex flex-row flex-wrap items-center justify-center gap-4 p-4" style="width: 100vw; z-index: 1">
+    <SubheroNavItem href="/#our-mission" label="Our Mission" />
+    <SubheroNavItem href="/program" label="Our Program" />
+    <SubheroNavItem href="/success" label="Program Success" />
+    <SubheroNavItem href="/start-up-campaign" label="Start Up Campaign" />
+    <SubheroNavItem href="/get-involved" label="Get Involved" />
+    <SubheroNavItem href="/about" label="About Us" />
+    <SubheroNavItem href="/donate" label="Donate" />
+	</div>
 	<video autoplay class="x-hero-video" muted playsinline>
 		<source src="/ttr-hero-comp-v6-l.mp4" />
 	</video>
-	<div class="flex flex-row flex-wrap items-center justify-center gap-4 m-4">
-		<SubheroNavItem href="/#our-mission">Our Mission</SubheroNavItem>
-		<SubheroNavItem href="/program">Our Program</SubheroNavItem>
-		<SubheroNavItem href="/success">Program Success</SubheroNavItem>
-		<SubheroNavItem href="/start-up-campaign">Start Up Campaign</SubheroNavItem>
-		<SubheroNavItem href="/get-involved">Get Involved</SubheroNavItem>
-		<SubheroNavItem href="/about">About Us</SubheroNavItem>
-		<SubheroNavItem href="/donate">Donate</SubheroNavItem>
-	</div>
 	<ContentContainer>
 		<div class="flex flex-row items-center justify-center py-12 md:py-20">
 			<span class="text-4xl text-center font-light italic text-zinc-800">
