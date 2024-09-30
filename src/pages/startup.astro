@@ -1,0 +1,85 @@
+---
+import Footer from "../components/footer/Footer.astro"
+import Navbar from "../components/navbar/Navbar.astro"
+import CapitalCampaignTimeline from "../components/startup/CapitalCampaignTimeline.astro"
+import TTRSignature from "../components/TTRSignature.astro"
+import BaseLayout from "../layouts/BaseLayout.astro"
+import ContentContainer from "../layouts/ContentContainer.astro"
+---
+<BaseLayout title="Take The Reins">
+  <Navbar />
+	<ContentContainer maxWidth="max-w-5xl">
+		<div class="flex flex-col gap-8">
+			<div class="flex flex-col gap-2">
+				<span class="text-xl text-center">
+					To get us started and make it happen, Take the Reins Youth Stable for Life needs….
+				</span>
+				<span class="text-4xl text-center font-bold">
+					You!
+				</span>
+			</div>
+			<div class="flex flex-col gap-1">
+				<span class="text-lg font-semibold">
+					Your Support is Vital!
+				</span>
+				<span class="text-md font-light">
+					Take the Reins Youth Stable for Life is unique in central Indiana.  Other equine programs in our area may focus
+					on a special target population, have minimal or basic youth and horse interaction, and may even run the program
+					on a fee for service basis.  Typically a comprehensive equine program such as ours is seen as being only for
+					people of means.  For the under-resourced and low income youth of central Indiana, Take the Reins is a free
+					program. <TTRSignature /> youth are investing in their own lives to become productive citizens, and you are KEY
+					to helping them fulfill their mission!
+				</span>
+				<span class="text-md font-light">
+					There are many ways you can help us move forward with our mission.  You can volunteer in more ways than you can
+					imagine! But for now, please consider supporting Take the Reins by donating to help us move through our three
+					development Phases.
+				</span>
+			</div>
+			<div class="flex flex-col gap-1">
+				<span class="text-lg font-semibold">
+					Moving Forward In Phases...
+				</span>
+				<div class="w-full">
+					<CapitalCampaignTimeline />
+				</div>
+			</div>
+			<div>
+				<div class="flex flex-row flex-wrap gap-1 md:gap-8 items-baseline">
+					<span class="text-lg font-semibold">
+						Phase 1: Launch 40K
+					</span>
+					<span class="text-md font-light italic">
+						Getting Take the Reins Up and Running
+					</span>
+				</div>
+				<span>
+					Phase 1 will last from one to four years and be folded into the regular operational phase as Take the Reins
+					grows to a full time, fully operational program.
+				</span>
+			</div>
+			<div>
+				<div class="flex flex-row flex-wrap gap-1 md:gap-8 items-baseline">
+					<span class="text-lg font-semibold">
+						Phase 2: Operational Campaign
+					</span>
+					<span class="text-md font-light italic">
+						Staffing and Operating The Full Program
+					</span>
+				</div>
+			</div>
+			<div>
+				<div class="flex flex-row flex-wrap gap-1 md:gap-8 items-baseline">
+					<span class="text-lg font-semibold">
+						Phase 3: Bring It Home Campaign
+					</span>
+					<span class="text-md font-light italic">
+						A Capital Campaign For a Home Base
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	</ContentContainer>
+	<Footer />
+</BaseLayout>

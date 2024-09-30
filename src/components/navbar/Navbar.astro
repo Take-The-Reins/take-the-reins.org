@@ -7,7 +7,7 @@ interface Props {
 const {} = Astro.props;
 ---
 <div class="flex flex-row items-center flex-wrap bg-stone-200 px-10 md:px-20 py-6">
-  <a class="flex flex-row items-center flex-wrap" href="/">
+  <a class="flex flex-row flex-wrap items-center justify-center" href="/">
     <Image
       alt="Take The Reins logo"
       height={100}
@@ -19,11 +19,12 @@ const {} = Astro.props;
     ]}>Take The Reins</span>
   </a>
   <div class="grow" />
-  <div class="flex flex-row items-center flex-wrap">
-    <NavbarLink href="/success">Program Success</NavbarLink>
-    <NavbarLink href="/success">Startup Campaign</NavbarLink>
-    <NavbarLink href="/success">Get Involved</NavbarLink>
-    <NavbarLink href="/success">About Us</NavbarLink>
+  <div class="flex flex-row flex-wrap items-center justify-center">
+    <NavbarLink href="/program">Our Program</NavbarLink>
+    <NavbarLink href="/success">Success</NavbarLink>
+    <NavbarLink href="/startup">Startup Campaign</NavbarLink>
+    <NavbarLink href="/volunteer">Get Involved</NavbarLink>
+    <NavbarLink href="/about">About Us</NavbarLink>
     <div class="min-w-2" />
     <NavbarLink href="/donate" primary>
       DONATE

@@ -6,9 +6,7 @@ import BaseLayout from "../layouts/BaseLayout.astro"
 import ContentContainer from "../layouts/ContentContainer.astro"
 ---
 <BaseLayout title="Take The Reins">
-	<div class="px-2 lg:px-8 py-1 lg:py-2 bg-orange-300">
-		<Navbar />
-	</div>
+	<Navbar />
 	<ContentContainer>
     <span class="text-4xl font-semibold text-stone-900 pb-2">
       Our Team
@@ -20,12 +18,13 @@ import ContentContainer from "../layouts/ContentContainer.astro"
     </span>
     <div class="flex flex-col gap-8 pb-4">
       <TeamMemberCard 
-        description="Jeff Weaver graduated from the University of Georgia College of Pharmacy in 1983 and enjoyed a career of thirty-one years with Eli Lilly and Company. There, he developed skills in facilitating strategic planning which has enabled him to pursue other dreams. His wife Brenda's passion for horses rekindled his own long-lost love for horses, and he began riding. In 2016, Jeff started Jacobs Creek Racing LLC, and standardbred racing stable that now has six active racehorses. Through close friends who are teachers in Indianapolis and Philadelphia, Jeff has become aware of the issues that face many inner-city children. After reading Kareem Rosser's book Crossing the Line, and getting to know fellow rider (and inner-city teacher) Alison Haag at Essig Farms, Jeff began to transform a dream into a plan for Take The Reins Youth Stable for Life."
+        description1="Jeff Weaver graduated from the University of Georgia College of Pharmacy in 1983 and enjoyed a career of thirty-one years with Eli Lilly and Company. There, he developed skills in facilitating strategic planning which has enabled him to pursue other dreams. His wife Brenda's passion for horses rekindled his own long-lost love for horses, and he began riding."
+        description2="In 2016, Jeff started Jacobs Creek Racing LLC, and standardbred racing stable that now has six active racehorses. Through close friends who are teachers in Indianapolis and Philadelphia, Jeff has become aware of the issues that face many inner-city children. After reading Kareem Rosser's book Crossing the Line, and getting to know fellow rider (and inner-city teacher) Alison Haag at Essig Farms, Jeff began to transform a dream into a plan for Take The Reins Youth Stable for Life."
         imageSrc="/horse-2.webp"
         name="Jeff Weaver" 
         title="Co-Founder and Executive Director" />
       <TeamMemberCard 
-        description="Alison Haag has been involved with horses since 1989. She learned Hunter/Jumper horsemanship at Stanley Lake Farm near Chicago, IL. She had multiple trainers there and attended clinics led by Olympian Michael Page. After a successful appointment in retail, Alison embraced her true calling: education. Alison now strives to weave her love of teaching high school students with her equine passions. Alison's ultimate dream is to create a safe place for her students where they can find the same zest for horses that she and fellow rider Jeff Weaver and horse trainer Don Bode emanate."
+        description1="Alison Haag has been involved with horses since 1989. She learned Hunter/Jumper horsemanship at Stanley Lake Farm near Chicago, IL. She had multiple trainers there and attended clinics led by Olympian Michael Page. After a successful appointment in retail, Alison embraced her true calling: education. Alison now strives to weave her love of teaching high school students with her equine passions. Alison's ultimate dream is to create a safe place for her students where they can find the same zest for horses that she and fellow rider Jeff Weaver and horse trainer Don Bode emanate."
         imageSrc="/horse-2.webp"
         name="Alison Haag" 
         title="Co-Founder and Program Director" />

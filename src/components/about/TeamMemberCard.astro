@@ -1,22 +1,32 @@
 ---
 interface Props {
-  description: string;
+  description1: string;
+  description2?: string;
   imageSrc: string;
   name: string;
   title: string;
 }
-const { description, imageSrc, name, title } = Astro.props;
+const { description1, description2, imageSrc, name, title } = Astro.props;
 ---
 <div class="flex flex-row items-center gap-4">
-  <img class="rounded-md x-img" src={imageSrc} />
-  <div class="flex flex-col">
-    <span class="text-xl font-semibold leading-tight">{name}</span>
-    <span class="text-md leading-tight">{title}</span>
-    <span class="text-sm font-thin leading-tight">{description}</span>
+  <img class="rounded-lg shadow-md x-img" src={imageSrc} />
+  <div class="flex flex-col gap-2">
+    <div class="flex flex-row flex-wrap items-baseline gap-2">
+      <span class="text-2xl text-stone-800 font-semibold">
+        {name}
+      </span>
+      <span class="text-md text-stone-500 italic">
+        {title}
+      </span>
+    </div>
+    <div class="flex flex-col gap-1">
+      <span class="text-sm font-extralight text-stone-700">{description1}</span>
+      <span class="text-sm font-extralight text-stone-700">{description2}</span>
+    </div>
   </div>
 </div>
 <style>
 .x-img {
-  max-width: 250px;
+  max-width: 220px;
 }
 </style>
