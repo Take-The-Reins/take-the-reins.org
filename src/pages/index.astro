@@ -1,22 +1,14 @@
 ---
 import Button from '../components/Button.astro';
-import SubheroNavItem from '../components/index/SubheroNavItem.astro';
+import IndexNavbar from '../components/index/IndexNavbar.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ContentContainer from '../layouts/ContentContainer.astro';
 import Footer from '../components/footer/Footer.astro';
 import TTRSignature from '../components/TTRSignature.astro';
 ---
 <BaseLayout backgroundColor='#e7e5e4' title="Take The Reins">
-  <div class="absolute flex flex-row flex-wrap items-center justify-center gap-4 p-4" style="width: 100vw; z-index: 1">
-    <SubheroNavItem href="/#our-mission" label="Our Mission" />
-    <SubheroNavItem href="/program" label="Our Program" />
-    <SubheroNavItem href="/success" label="Program Success" />
-    <SubheroNavItem href="/start-up-campaign" label="Start Up Campaign" />
-    <SubheroNavItem href="/get-involved" label="Get Involved" />
-    <SubheroNavItem href="/about" label="About Us" />
-    <SubheroNavItem href="/donate" label="Donate" />
-	</div>
-	<video autoplay class="x-hero-video" muted playsinline>
+  <IndexNavbar />
+	<video autoplay class="x-hero-video pt-0" muted playsinline>
 		<source src="/ttr-hero-comp-v6-l.mp4" />
 	</video>
 	<ContentContainer>
@@ -74,5 +66,9 @@ import TTRSignature from '../components/TTRSignature.astro';
 	min-height: 1px;
 	max-height: 1px;
 	width: 100%;
+}
+.x-nav-container {
+  width: 100vw;
+  z-index: 1;
 }
 </style>
