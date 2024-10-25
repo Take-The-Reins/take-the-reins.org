@@ -2,12 +2,12 @@
 import { Icon } from "astro-icon/components";
 import IndexNavItem from "./IndexNavItem.astro";
 ---
-<div class="absolute p-4 w-screen z-10">
+<div class="absolute px-6 py-4 w-screen z-10">
   <div class="md:flex flex-row flex-wrap gap-4 hidden items-center justify-center w-full z-10">
     <IndexNavItem href="/#our-mission" label="Our Mission" />
     <IndexNavItem href="/program" label="Our Program" />
     <IndexNavItem href="/success" label="Program Success" />
-    <IndexNavItem href="/start-up-campaign" label="Start Up Campaign" />
+    <IndexNavItem href="/startup-campaign" label="Start Up Campaign" />
     <IndexNavItem href="/get-involved" label="Get Involved" />
     <IndexNavItem href="/about" label="About Us" />
     <IndexNavItem href="/donate" label="Donate" />
@@ -22,7 +22,7 @@ import IndexNavItem from "./IndexNavItem.astro";
     <IndexNavItem href="/#our-mission" label="Our Mission" />
     <IndexNavItem href="/program" label="Our Program" />
     <IndexNavItem href="/success" label="Program Success" />
-    <IndexNavItem href="/start-up-campaign" label="Start Up Campaign" />
+    <IndexNavItem href="/startup-campaign" label="Start Up Campaign" />
     <IndexNavItem href="/get-involved" label="Get Involved" />
     <IndexNavItem href="/about" label="About Us" />
     <IndexNavItem href="/donate" label="Donate" />
@@ -41,8 +41,8 @@ import IndexNavItem from "./IndexNavItem.astro";
     padding: 8px;
     position: absolute;
     right: 0;
-    top: 200;
     transition: right 0.3s ease;
+    top: 200;
     width: 250px;
   }
   #sidebar.collapsed {
@@ -55,4 +55,3 @@ import IndexNavItem from "./IndexNavItem.astro";
     document.getElementById("sidebar")?.classList.toggle("collapsed");
   });
 </script>
-

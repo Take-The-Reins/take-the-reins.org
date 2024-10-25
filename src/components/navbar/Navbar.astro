@@ -10,19 +10,17 @@ const {} = Astro.props;
   <a class="flex flex-row flex-wrap items-center justify-center" href="/">
     <Image
       alt="Take The Reins logo"
-      height={100}
+      height={66}
+      id="logo"
       src="/ttr-logo.png"
-      width={100}
+      width={200}
     />
-    <span class:list={[
-      "text-2xl text-orange-900 hover:text-orange-700 font-semibold transition-all",
-    ]}>Take The Reins</span>
   </a>
   <div class="grow" />
   <div class="flex flex-row flex-wrap items-center justify-center">
     <NavbarLink href="/program">Our Program</NavbarLink>
     <NavbarLink href="/success">Success</NavbarLink>
-    <NavbarLink href="/startup">Startup Campaign</NavbarLink>
+    <NavbarLink href="/startup-campaign">Startup Campaign</NavbarLink>
     <NavbarLink href="/get-involved">Get Involved</NavbarLink>
     <NavbarLink href="/about">About Us</NavbarLink>
     <div class="min-w-2" />
@@ -31,3 +29,9 @@ const {} = Astro.props;
     </NavbarLink>
   </div>
 </div>
+<style>
+  #logo {
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+</style>
