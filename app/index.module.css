@@ -1,0 +1,22 @@
+.xNav {
+  width: 100%;
+}
+
+.xHeroVideo {
+  max-height: 80vh;
+  min-height: 50vh;
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+}
+
+.xDivider {
+  min-height: 1px;
+  max-height: 1px;
+  width: 100%;
+}
+
+.xNavContainer {
+  width: 100vw;
+  z-index: 1;
+}

@@ -1,0 +1,9 @@
+.xContainer {}
+
+.xText {
+  color: #f8fafc;
+}
+
+.xContainer:hover .xText {
+  color: #9a3412;
+}

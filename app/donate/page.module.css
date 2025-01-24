@@ -1,0 +1,14 @@
+.xDonationContainer {
+  height: 1200px;
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+}
+
+@media (min-width: 768px) {
+  .xDonationContainer {
+      height: 1200px;
+      max-width: 800px;
+      width: 800px;
+  }
+}
