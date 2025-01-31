@@ -1,25 +1,49 @@
 ---
 import Button from "../components/Button.astro"
 import Footer from "../components/footer/Footer.astro"
+import GetInvolvedPartnerCard from "../components/GetInvolvedPartnerCard.astro"
 import Navbar from "../components/navbar/Navbar.astro"
 import BaseLayout from "../layouts/BaseLayout.astro"
 import ContentContainer from "../layouts/ContentContainer.astro"
+import DividerH from "../components/DividerH.astro"
 ---
 <BaseLayout title="Take The Reins">
   <Navbar />
 	<ContentContainer maxWidth="max-w-3xl">
-		<span class="self-start text-4xl font-semibold text-center text-stone-700 mb-2">
-			A special thanks and recognition to our partners!
-		</span>
-    <span class="text-md font-thin text-stone-800 text-center my-4">
-      Of course we are just getting started and Take the Reins does not have its own facility... yet.  We are partnering
-			with outstanding folks and equine barns in central Indiana to begin our camps and program.  
-			We thank these people from the bottom of our hearts for helping us to change the lives of our youth and set them
-			on a path to a productive and satisfying life! 
-    </span>
-    <div class="mt-16">
-      <Button href="/donate">Donate</Button>
-    </div>
+		<div class="flex flex-col gap-2 items-center">
+			<span class="self-start text-4xl font-semibold text-center text-stone-700 mb-2">
+				A special thanks and recognition to our partners!
+			</span>
+			<span class="text-md font-thin text-stone-800 text-center my-4">
+				Of course we are just getting started and Take the Reins does not have its own facility... yet.  We are partnering
+				with outstanding folks and equine barns in central Indiana to begin our camps and program.  
+				We thank these people from the bottom of our hearts for helping us to change the lives of Indianapolis youth and
+				set them on a path to a productive and satisfying life! 
+			</span>
+			<div class="flex flex-row items-center flex-wrap gap-4">
+				<GetInvolvedPartnerCard href="https://havenshoperanchandstables.com/" logoSrc="/havens_hope.webp" />
+				<GetInvolvedPartnerCard href="https://harnessinghopeequine.com/" logoSrc="/harnessing_hope.webp" name1="Harnessing Hope" name2="Therapeutic Riding & Driving" />
+			</div>
+			<span class="text-md">We are grateful for our partners and hope you will check them out!</span>
+			<div class="pt-8 pb-8 w-full">
+				<DividerH />
+			</div>
+			<span class="text-2xl">Can We Welcome You Aboard?</span>
+			<div class="flex flex-col gap-6 items-center">
+				<div class="flex flex-col gap-2 items-center">
+					<Button href="mailto:contact@take-the-reins.org">Volunteering</Button>
+					<span class="text-md font-thin text-stone-800">
+						A great way to start!
+					</span>
+				</div>
+				<div class="flex flex-col gap-2 items-center">
+					<Button href="/donate">Donate</Button>
+					<span class="text-md font-thin text-stone-800">
+						To our launch 45K and Summer Camps!
+					</span>
+				</div>
+			</div>
+		</div>
 	</ContentContainer>
 	<Footer />
 </BaseLayout>

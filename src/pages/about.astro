@@ -1,5 +1,6 @@
 ---
-import TeamMemberCard from "../components/about/TeamMemberCard.astro"
+import AboutTeamMemberMajorCard from "../components/AboutTeamMemberMajorCard.astro"
+import AboutTeamMemberMinorCard from "../components/AboutTeamMemberMinorCard.astro"
 import Footer from "../components/footer/Footer.astro"
 import Navbar from "../components/navbar/Navbar.astro"
 import BaseLayout from "../layouts/BaseLayout.astro"
@@ -7,7 +8,7 @@ import ContentContainer from "../layouts/ContentContainer.astro"
 ---
 <BaseLayout title="Take The Reins">
 	<Navbar />
-	<ContentContainer>
+	<ContentContainer maxWidth="max-w-5xl">
     <span class="text-4xl font-semibold text-stone-900 pb-2">
       Our Team
     </span>
@@ -17,24 +18,33 @@ import ContentContainer from "../layouts/ContentContainer.astro"
       supportive interaction, and teamwork.
     </span>
     <div class="flex flex-col gap-8 pb-4">
-      <TeamMemberCard
+      <AboutTeamMemberMajorCard
         description1="Jeff Weaver graduated from the University of Georgia College of Pharmacy in 1983 and enjoyed a career of thirty-one years with Eli Lilly and Company. There, he developed skills in facilitating strategic planning which has enabled him to pursue other dreams. His wife Brenda's passion for horses rekindled his own long-lost love for horses, and he began riding."
-        description2="In 2016, Jeff started Jacobs Creek Racing LLC, and standardbred racing stable that now has six active racehorses. Through close friends who are teachers in Indianapolis and Philadelphia, Jeff has become aware of the issues that face many inner-city children. After reading Kareem Rosser's book Crossing the Line, and getting to know fellow rider (and inner-city teacher) Alison Haag at Essig Farms, Jeff began to transform a dream into a plan for Take The Reins Youth Stable for Life."
+        description2="In 2016, Jeff started Jacobs Creek Racing LLC, a standardbread racing stable that has stabled numerous successful racehorses, a breeding stallion, and several broodmares. Through close friends who are teachers in Indianapolis and Philadelphia, Jeff has become aware of the issues that face many inner-city children. After reading Kareem Rosser's book Crossing the Line, and getting to know other equestrians, Jeff began to transform a dream into a plan for Take The Reins Youth Stable for Life."
         imageSrc="/horse-2.webp"
         name="Jeff Weaver"
-        title="Co-Founder and Executive Director" />
-      <TeamMemberCard
+        title="Founder and Executive Director" />
+      <AboutTeamMemberMajorCard
         description1="We are actively seeking someone interested in joining as a Program Director."
         imageSrc="/horse-2.webp"
         name="To Be Filled"
         title="Program Director" />
       </div>
+      <span class="max-w-3xl text-md text-center mt-16">
+        As we grow and prepare for Phase 2, year round program expansion with a staff to support our full mission, we
+        will identify staff and volunteer positions essential to implement our full program. Currently, the following
+        positions have been identified.
+      </span>
+      <div class="flex flex-row flex-wrap gap-4 items-center justify-center">
+        <AboutTeamMemberMinorCard imageSrc="/horse-2.webp" title="Director of Development" />
+        <AboutTeamMemberMinorCard imageSrc="/horse-2.webp" title="Equine Operations Manager" />
+        <AboutTeamMemberMinorCard imageSrc="/horse-2.webp" title="Education Operations Coordinator" />
+        <AboutTeamMemberMinorCard imageSrc="/horse-2.webp" title="Development and Operations Administrator" />
+        <AboutTeamMemberMinorCard imageSrc="/horse-2.webp" title="Volunteer Coordinator" />
+      </div>
+      <span class="max-2-3xl text-md text-center">
+        If you feel you would like to become part of our team, <a href="mailto:contact@take-the-reins.org">please contact us here!</a>
+      </span>
 	</ContentContainer>
 	<Footer />
 </BaseLayout>
-
-<style>
-.x-container {
-  min-height: 70vh;
-}
-</style>
