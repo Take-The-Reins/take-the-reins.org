@@ -1,0 +1,34 @@
+---
+import Footer from "../components/footer/Footer.astro"
+import Navbar from "../components/navbar/Navbar.astro"
+import BaseLayout from "../layouts/BaseLayout.astro"
+import ContentContainer from "../layouts/ContentContainer.astro"
+---
+<BaseLayout title="Take The Reins">
+	<Navbar />
+	<ContentContainer>
+		<span class="text-4xl font-semibold text-stone-900 mb-4">
+			Donations
+		</span>
+		<div id="donation-container">
+		  <iframe title='Donation form powered by Zeffy' style='position: absolute; border: 0; top:0;left:0;bottom:0;right:0;width:100%;height:100%' src='https://www.zeffy.com/embed/donation-form/90e0310a-7639-4281-9982-d4b0daaba5e2' allow="payment" allowtransparency="true">
+		  </iframe>
+		</div>
+	</ContentContainer>
+	<Footer />
+</BaseLayout>
+<style>
+#donation-container {
+    height: 1200px;
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+}
+@media (min-width: 768px) {
+    #donation-container {
+        height: 1200px;
+        max-width: 800px;
+        width: 800px;
+    }
+}
+</style>

@@ -1,0 +1,16 @@
+---
+import FooterContact from './FooterContact.astro';
+import FooterLinks from './FooterLinks.astro';
+---
+<div class="flex flex-col items-center bg-stone-200 px-8 md:px-0 py-20">
+  <div class="border border-dashed border-t-stone-500 mb-8 x-divider w-full md:w-3/4" />
+  <div class="flex flex-row gap-8 md:gap-20 lg:gap-40 max-w-4xl">
+    <FooterContact />
+    <FooterLinks />
+  </div>
+</div>
+<style>
+  .x-divider {
+    height: 1px;
+  }
+</style>

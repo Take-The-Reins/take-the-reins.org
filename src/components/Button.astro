@@ -1,0 +1,27 @@
+---
+interface Props {
+  href: string;
+  target?: "_self" | "_blank";
+  variant?: "primary" | "standard";
+}
+const { href, target, variant = "standard" } = Astro.props;
+---
+<a
+  class:list={{
+    "transition-all rounded-lg shadow-md hover:shadow-xl": true,
+    "px-4 py-2": true,
+    "md:px-6 md:py-3": true,
+    "border border-orange-100 bg-orange-50 hover:bg-orange-100": variant === "standard",
+    "border border-orange-300 bg-orange-200 hover:bg-orange-300": variant === "primary",
+  }}
+  href={href}
+  target={target}
+>
+  <span class:list={{
+    "text-orange-950 font-semibold": true,
+    "text-md": true,
+    "md:text-xl": true,
+  }}>
+    <slot />
+  </span>
+</a>
